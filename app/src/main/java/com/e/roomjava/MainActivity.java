@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     TextView textView;
 
     EditText name, age, etId;
-    Button add, update, delete;
+    Button add, update, delete, notification;
     List<User> userList = new ArrayList<>();
 
 
@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         etId = findViewById(R.id.etId);
         add = findViewById(R.id.btnAdd);
         delete = findViewById(R.id.btnDelete);
+        notification = findViewById(R.id.btnNotification);
         userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
 
 
@@ -84,5 +85,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         });
+
+        notification.setOnClickListener(v -> AppUtils.showFullScreenNotification(MainActivity.this));
+
+
     }
 }
