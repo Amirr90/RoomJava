@@ -16,7 +16,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-
     UserViewModel userViewModel;
     private static final String TAG = "MainActivity";
     TextView textView;
@@ -87,7 +86,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
         notification.setOnClickListener(v -> AppUtils.showFullScreenNotification(MainActivity.this));
+        Toast.makeText(this, "Show Toast", Toast.LENGTH_SHORT).show();
+    }
 
+    public void fun(){
 
     }
 }
